@@ -21,7 +21,7 @@ node{
         stage("run container on dev server"){
           def dockerRun = "docker run -itd -p 8081:8080 --name tomcat balu7632/myweb"
           sshagent(['tomcat-node-1']) {
-            sh "ssh -o StrictHostKeyChecking=no ec2-user@172.31.34.70 ${dockerRun}"       
+            sh "ssh -o StrictHostKeyChecking=no ec2-user@3.108.40.67 ${dockerRun}"       
         }
     }
 }
